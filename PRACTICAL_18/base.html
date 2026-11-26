@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Image Slideshow</h2>
+    <img id="photo" src="img1.jpg" width="300" height="200">
+    <br><br>
+    <button onclick="previous()">Previous</button>
+    <button onclick="next()">Next</button>
+    <script>
+        let images = ["img1.jpg ", "img2.jpg", "img3.jpg"];
+        let i = 0;
+        function show() {
+            document.getElementById("photo").src = images[i];
+        }
+        function next() {
+            i = (i + 1) % images.length;
+            show();
+        }
+        function previous() {
+            i = (i - 1 + images.length) % images.length;
+            show();
+        }
+    </script>
+</body>
+
+</html>
