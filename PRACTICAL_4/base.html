@@ -1,0 +1,60 @@
+<!-- Create forms with HTML5 validation attributes -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div class="container" align="center">
+        <fieldset>
+            <form action="">
+                <h2>LOGIN PAGE</h2>
+                <table colspan="2" rowspan="3" border="4">
+                    <tbody>
+
+                        <tr>
+                            <td><label for="name">Name</label></td>
+                            <td><input type="text" id="name" placeholder="Enter your name " required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="u_name">Username</label></td>
+                            <td><input type="text" id="u_name" placeholder="Enter your username " required></td>
+                        </tr>
+                        
+                        <tr>
+                            <td><label for="DOB">Date Of Birth</label></td>
+                            <td><input type="date" id="DOB" required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="pass">Password</label></td>
+                            <td><input type="password" id="pass" placeholder="Enter your password " required></td>
+                        </tr>
+
+                        <tr>
+                            <td><label for="c_pass">confirm Password</label></td>
+                            <td><input type="password" id="c_pass" placeholder="confirm your password " required></td>
+                        </tr>
+
+
+                        <tr>
+                            <td><label for="text_area">Give your Feedback</label></td>
+                            <td><textarea id="text_area"></textarea></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+                <button id="submit" onclick="">Submit</button>
+            </form>
+        </fieldset>
+    </div>
+
+</body>
+</html>
