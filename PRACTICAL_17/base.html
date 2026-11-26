@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Simple Calculator</h2>
+    <input type="number" id="a" placeholder="First Number">
+    <input type="number" id="b" placeholder="Second Number">
+    <br><br>
+    <button onclick="calc('+')">+</button>
+    <button onclick="calc('-')">-</button>
+    <button onclick="calc('*')">*</button>
+    <button onclick="calc('/')">/</button>
+    <h3 id="result">Result: </h3>
+    <script>
+        function calc(op) {
+            let a = Number(document.getElementById("a").value);
+            let b = Number(document.getElementById("b").value);
+            let r;
+            if (op == '+') r = a + b;
+            else if (op == '-') r = a - b;
+            else if (op == '*') r = a * b;
+            else r = b == 0 ? "Cannot divide by zero" : a / b;
+            document.getElementById("result").innerHTML = "Result: " + r;
+        }
+    </script>
+</body>
+
+</html>
