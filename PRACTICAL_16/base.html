@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <h2>Form Validation</h2>
+    <form onsubmit="return validate()">
+        Name: <input type="text" id="name"><br><br>
+        Email: <input type="text" id="email"><br><br>
+        Password: <input type="password" id="pass"><br><br>
+        Age: <input type="number" id="age"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+        function validate() {
+            let n = document.getElementById("name").value;
+            let e = document.getElementById("email").value;
+            let p = document.getElementById("pass").value;
+            let a = Number(document.getElementById("age").value);
+
+            if (n.length < 3 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(e)
+                || p.length < 6 || a < 18 || !a) {
+                alert("Invalid Details");
+                return false;
+            }
+            alert("Form Submitted Successfully");
+            return false;
+        }
+    </script>
+</body>
+
+</html>
